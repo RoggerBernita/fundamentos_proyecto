@@ -1,0 +1,29 @@
+-- 1. Consultar todos los clientes y sus reservas realizadas
+SELECT c.nombre, c.apellido, r.fecha_entrada, r.fecha_salida, r.total_reserva
+FROM rbernita.m_clientes c
+JOIN rbernita.t_reservas r ON c.id_cliente = r.id_cliente;
+
+-- 2. Consultar clientes que compraron (reservaron) entre enero y marzo de 2025
+SELECT DISTINCT c.nombre, c.apellido, r.fecha_entrada
+FROM rbernita.m_clientes c
+JOIN rbernita.t_reservas r ON c.id_cliente = r.id_cliente
+WHERE r.fecha_entrada BETWEEN '2025-01-01' AND '2025-03-31';
+
+-- 3. Ver el detalle de servicios consumidos por cada reserva
+SELECT r.id_reserva, s.nombre_servicio, ds.cantidad, ds.subtotal
+FROM rbernita.t_reservas r
+JOIN rbernita.t_detalle_servicios ds ON r.id_reserva = ds.id_reserva
+JOIN rbernita.m_servicios s ON ds.id_servicio = s.id_servicio;
+
+-- 4. Resumen de ingresos por método de pago
+SELECT metodo_pago, SUM(monto_pagado) as total_recaudado
+FROM rbernita.t_pagos
+GROUP BY metodo_pago;
+
+-- 5. Habitaciones más solicitadas (Top 3)
+SELECT h.numero, h.tipo, COUNT(r.id_reserva) as total_reservas
+FROM rbernita.m_habitaciones h
+JOIN rbernita.t_reservas r ON h.id_habitacion = r.id_habitacion
+GROUP BY h.numero, h.tipo
+ORDER BY total_reservas DESC
+LIMIT 3;
