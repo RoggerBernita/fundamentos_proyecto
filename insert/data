@@ -1,145 +1,158 @@
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Lucia', 'Alvarez', 'lucia.alvarez1@example.com', '555-7178', 'Calle Falsa 115');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Ricardo', 'Navarro', 'ricardo.navarro2@example.com', '555-1454', 'Calle Falsa 37');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Juan', 'Garcia', 'juan.garcia3@example.com', '555-9224', 'Calle Falsa 401');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Carlos', 'Torres', 'carlos.torres4@example.com', '555-8764', 'Calle Falsa 475');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Jorge', 'Gil', 'jorge.gil5@example.com', '555-6934', 'Calle Falsa 232');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Lucia', 'Romero', 'lucia.romero6@example.com', '555-1750', 'Calle Falsa 479');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Laura', 'Navarro', 'laura.navarro7@example.com', '555-6673', 'Calle Falsa 369');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Lucia', 'Garcia', 'lucia.garcia8@example.com', '555-1949', 'Calle Falsa 226');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Elena', 'Gomez', 'elena.gomez9@example.com', '555-4357', 'Calle Falsa 496');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Elena', 'Ramos', 'elena.ramos10@example.com', '555-9471', 'Calle Falsa 263');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Ricardo', 'Perez', 'ricardo.perez11@example.com', '555-9581', 'Calle Falsa 68');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Sofia', 'Romero', 'sofia.romero12@example.com', '555-9245', 'Calle Falsa 215');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Miguel', 'Dominguez', 'miguel.dominguez13@example.com', '555-7848', 'Calle Falsa 385');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Maria', 'Lopez', 'maria.lopez14@example.com', '555-6198', 'Calle Falsa 375');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Juan', 'Gomez', 'juan.gomez15@example.com', '555-4573', 'Calle Falsa 133');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Ricardo', 'Gomez', 'ricardo.gomez16@example.com', '555-9837', 'Calle Falsa 18');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Jorge', 'Gil', 'jorge.gil17@example.com', '555-8113', 'Calle Falsa 178');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Sofia', 'Gutierrez', 'sofia.gutierrez18@example.com', '555-5261', 'Calle Falsa 258');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Ricardo', 'Sanchez', 'ricardo.sanchez19@example.com', '555-2364', 'Calle Falsa 150');
-INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES ('Carlos', 'Torres', 'carlos.torres20@example.com', '555-2390', 'Calle Falsa 468');
-INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES ('101', 'Presidencial', 300.0, 'Disponible');
-INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES ('102', 'Individual', 50.0, 'Disponible');
-INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES ('103', 'Presidencial', 300.0, 'Disponible');
-INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES ('104', 'Individual', 50.0, 'Disponible');
-INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES ('105', 'Individual', 50.0, 'Disponible');
-INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES ('106', 'Individual', 50.0, 'Disponible');
-INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES ('107', 'Presidencial', 300.0, 'Disponible');
-INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES ('108', 'Suite', 150.0, 'Disponible');
-INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES ('109', 'Individual', 50.0, 'Disponible');
-INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES ('110', 'Individual', 50.0, 'Disponible');
-INSERT INTO rbernita.m_servicios (nombre_servicio, precio) VALUES ('Desayuno Buffet', 15.0);
-INSERT INTO rbernita.m_servicios (nombre_servicio, precio) VALUES ('Spa', 40.0);
-INSERT INTO rbernita.m_servicios (nombre_servicio, precio) VALUES ('Gimnasio', 10.0);
-INSERT INTO rbernita.m_servicios (nombre_servicio, precio) VALUES ('Lavanderia', 20.0);
-INSERT INTO rbernita.m_servicios (nombre_servicio, precio) VALUES ('Room Service', 25.0);
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (15, 6, '2025-03-14', '2025-03-18', 400, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (20, 8, '2025-05-18', '2025-05-24', 600, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (5, 5, '2025-04-11', '2025-04-14', 300, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (3, 8, '2025-03-17', '2025-03-23', 600, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (16, 5, '2025-01-11', '2025-01-18', 700, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (14, 3, '2025-05-17', '2025-05-20', 300, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (2, 5, '2025-05-26', '2025-05-31', 500, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (5, 9, '2025-01-27', '2025-01-29', 200, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (15, 2, '2025-01-04', '2025-01-09', 500, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (4, 7, '2025-04-09', '2025-04-14', 500, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (18, 3, '2025-05-30', '2025-05-31', 100, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (13, 3, '2025-04-15', '2025-04-16', 100, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (19, 7, '2025-04-24', '2025-04-25', 100, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (10, 7, '2025-05-04', '2025-05-09', 500, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (15, 8, '2025-01-22', '2025-01-24', 200, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (11, 6, '2025-03-17', '2025-03-22', 500, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (6, 1, '2025-04-09', '2025-04-16', 700, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (4, 3, '2025-03-29', '2025-04-03', 500, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (7, 8, '2025-03-17', '2025-03-19', 200, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (9, 8, '2025-05-21', '2025-05-27', 600, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (10, 4, '2025-02-24', '2025-02-28', 400, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (3, 8, '2025-04-05', '2025-04-12', 700, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (6, 10, '2025-03-13', '2025-03-14', 100, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (18, 1, '2025-02-12', '2025-02-17', 500, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (15, 3, '2025-05-31', '2025-06-07', 700, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (9, 1, '2025-01-03', '2025-01-09', 600, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (3, 4, '2025-01-05', '2025-01-07', 200, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (19, 10, '2025-02-03', '2025-02-08', 500, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (8, 4, '2025-02-07', '2025-02-09', 200, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (2, 4, '2025-05-05', '2025-05-09', 400, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (8, 10, '2025-02-13', '2025-02-14', 100, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (2, 5, '2025-02-19', '2025-02-20', 100, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (8, 3, '2025-05-18', '2025-05-21', 300, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (8, 8, '2025-01-24', '2025-01-27', 300, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (3, 2, '2025-02-22', '2025-02-28', 600, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (6, 1, '2025-01-15', '2025-01-18', 300, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (15, 5, '2025-05-05', '2025-05-12', 700, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (20, 4, '2025-04-30', '2025-05-03', 300, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (16, 9, '2025-04-17', '2025-04-18', 100, 'Finalizada');
-INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES (1, 6, '2025-01-01', '2025-01-04', 300, 'Finalizada');
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (36, 5, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (9, 2, 2, 40.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (12, 1, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (25, 1, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (35, 5, 1, 20.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (38, 1, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (18, 1, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (26, 2, 2, 40.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (3, 2, 1, 20.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (4, 4, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (39, 4, 2, 40.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (19, 1, 1, 20.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (37, 4, 2, 40.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (15, 1, 1, 20.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (12, 1, 2, 40.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (31, 2, 1, 20.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (14, 2, 1, 20.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (16, 5, 2, 40.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (8, 4, 2, 40.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (2, 1, 1, 20.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (28, 2, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (40, 1, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (20, 4, 1, 20.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (9, 3, 1, 20.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (2, 5, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (20, 1, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (25, 3, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (6, 4, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (27, 2, 3, 60.0);
-INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES (9, 3, 1, 20.0);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (1, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (2, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (3, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (4, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (5, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (6, 'Tarjeta', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (7, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (8, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (9, 'Tarjeta', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (10, 'Tarjeta', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (11, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (12, 'Tarjeta', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (13, 'Tarjeta', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (14, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (15, 'Tarjeta', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (16, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (17, 'Tarjeta', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (18, 'Tarjeta', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (19, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (20, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (21, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (22, 'Tarjeta', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (23, 'Tarjeta', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (24, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (25, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (26, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (27, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (28, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (29, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (30, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (31, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (32, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (33, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (34, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (35, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (36, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (37, 'Efectivo', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (38, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (39, 'Transferencia', 500.00);
-INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES (40, 'Efectivo', 500.00);
+INSERT INTO rbernita.m_clientes (nombre, apellido, email, telefono, direccion) VALUES
+('Lucia', 'Alvarez', 'lucia.alvarez1@example.com', '555-7178', 'Calle Falsa 115'),
+('Ricardo', 'Navarro', 'ricardo.navarro2@example.com', '555-1454', 'Calle Falsa 37'),
+('Juan', 'Garcia', 'juan.garcia3@example.com', '555-9224', 'Calle Falsa 401'),
+('Carlos', 'Torres', 'carlos.torres4@example.com', '555-8764', 'Calle Falsa 475'),
+('Jorge', 'Gil', 'jorge.gil5@example.com', '555-6934', 'Calle Falsa 232'),
+('Lucia', 'Romero', 'lucia.romero6@example.com', '555-1750', 'Calle Falsa 479'),
+('Laura', 'Navarro', 'laura.navarro7@example.com', '555-6673', 'Calle Falsa 369'),
+('Lucia', 'Garcia', 'lucia.garcia8@example.com', '555-1949', 'Calle Falsa 226'),
+('Elena', 'Gomez', 'elena.gomez9@example.com', '555-4357', 'Calle Falsa 496'),
+('Elena', 'Ramos', 'elena.ramos10@example.com', '555-9471', 'Calle Falsa 263'),
+('Ricardo', 'Perez', 'ricardo.perez11@example.com', '555-9581', 'Calle Falsa 68'),
+('Sofia', 'Romero', 'sofia.romero12@example.com', '555-9245', 'Calle Falsa 215'),
+('Miguel', 'Dominguez', 'miguel.dominguez13@example.com', '555-7848', 'Calle Falsa 385'),
+('Maria', 'Lopez', 'maria.lopez14@example.com', '555-6198', 'Calle Falsa 375'),
+('Juan', 'Gomez', 'juan.gomez15@example.com', '555-4573', 'Calle Falsa 133'),
+('Ricardo', 'Gomez', 'ricardo.gomez16@example.com', '555-9837', 'Calle Falsa 18'),
+('Jorge', 'Gil', 'jorge.gil17@example.com', '555-8113', 'Calle Falsa 178'),
+('Sofia', 'Gutierrez', 'sofia.gutierrez18@example.com', '555-5261', 'Calle Falsa 258'),
+('Ricardo', 'Sanchez', 'ricardo.sanchez19@example.com', '555-2364', 'Calle Falsa 150'),
+('Carlos', 'Torres', 'carlos.torres20@example.com', '555-2390', 'Calle Falsa 468');
+
+INSERT INTO rbernita.m_habitaciones (numero, tipo, precio_noche, estado) VALUES
+('101', 'Presidencial', 300.0, 'Disponible'),
+('102', 'Individual', 50.0, 'Disponible'),
+('103', 'Presidencial', 300.0, 'Disponible'),
+('104', 'Individual', 50.0, 'Disponible'),
+('105', 'Individual', 50.0, 'Disponible'),
+('106', 'Individual', 50.0, 'Disponible'),
+('107', 'Presidencial', 300.0, 'Disponible'),
+('108', 'Suite', 150.0, 'Disponible'),
+('109', 'Individual', 50.0, 'Disponible'),
+('110', 'Individual', 50.0, 'Disponible');
+
+INSERT INTO rbernita.m_servicios (nombre_servicio, precio) VALUES
+('Desayuno Buffet', 15.0),
+('Spa', 40.0),
+('Gimnasio', 10.0),
+('Lavanderia', 20.0),
+('Room Service', 25.0);
+
+INSERT INTO rbernita.t_reservas (id_cliente, id_habitacion, fecha_entrada, fecha_salida, total_reserva, estado_reserva) VALUES
+(15, 6, '2025-03-14', '2025-03-18', 400, 'Finalizada'),
+(20, 8, '2025-05-18', '2025-05-24', 600, 'Finalizada'),
+(5, 5, '2025-04-11', '2025-04-14', 300, 'Finalizada'),
+(3, 8, '2025-03-17', '2025-03-23', 600, 'Finalizada'),
+(16, 5, '2025-01-11', '2025-01-18', 700, 'Finalizada'),
+(14, 3, '2025-05-17', '2025-05-20', 300, 'Finalizada'),
+(2, 5, '2025-05-26', '2025-05-31', 500, 'Finalizada'),
+(5, 9, '2025-01-27', '2025-01-29', 200, 'Finalizada'),
+(15, 2, '2025-01-04', '2025-01-09', 500, 'Finalizada'),
+(4, 7, '2025-04-09', '2025-04-14', 500, 'Finalizada'),
+(18, 3, '2025-05-30', '2025-05-31', 100, 'Finalizada'),
+(13, 3, '2025-04-15', '2025-04-16', 100, 'Finalizada'),
+(19, 7, '2025-04-24', '2025-04-25', 100, 'Finalizada'),
+(10, 7, '2025-05-04', '2025-05-09', 500, 'Finalizada'),
+(15, 8, '2025-01-22', '2025-01-24', 200, 'Finalizada'),
+(11, 6, '2025-03-17', '2025-03-22', 500, 'Finalizada'),
+(6, 1, '2025-04-09', '2025-04-16', 700, 'Finalizada'),
+(4, 3, '2025-03-29', '2025-04-03', 500, 'Finalizada'),
+(7, 8, '2025-03-17', '2025-03-19', 200, 'Finalizada'),
+(9, 8, '2025-05-21', '2025-05-27', 600, 'Finalizada'),
+(10, 4, '2025-02-24', '2025-02-28', 400, 'Finalizada'),
+(3, 8, '2025-04-05', '2025-04-12', 700, 'Finalizada'),
+(6, 10, '2025-03-13', '2025-03-14', 100, 'Finalizada'),
+(18, 1, '2025-02-12', '2025-02-17', 500, 'Finalizada'),
+(15, 3, '2025-05-31', '2025-06-07', 700, 'Finalizada'),
+(9, 1, '2025-01-03', '2025-01-09', 600, 'Finalizada'),
+(3, 4, '2025-01-05', '2025-01-07', 200, 'Finalizada'),
+(19, 10, '2025-02-03', '2025-02-08', 500, 'Finalizada'),
+(8, 4, '2025-02-07', '2025-02-09', 200, 'Finalizada'),
+(2, 4, '2025-05-05', '2025-05-09', 400, 'Finalizada'),
+(8, 10, '2025-02-13', '2025-02-14', 100, 'Finalizada'),
+(2, 5, '2025-02-19', '2025-02-20', 100, 'Finalizada'),
+(8, 3, '2025-05-18', '2025-05-21', 300, 'Finalizada'),
+(8, 8, '2025-01-24', '2025-01-27', 300, 'Finalizada'),
+(3, 2, '2025-02-22', '2025-02-28', 600, 'Finalizada'),
+(6, 1, '2025-01-15', '2025-01-18', 300, 'Finalizada'),
+(15, 5, '2025-05-05', '2025-05-12', 700, 'Finalizada'),
+(20, 4, '2025-04-30', '2025-05-03', 300, 'Finalizada'),
+(16, 9, '2025-04-17', '2025-04-18', 100, 'Finalizada'),
+(1, 6, '2025-01-01', '2025-01-04', 300, 'Finalizada');
+
+INSERT INTO rbernita.t_detalle_servicios (id_reserva, id_servicio, cantidad, subtotal) VALUES
+(36, 5, 3, 60.0),
+(9, 2, 2, 40.0),
+(12, 1, 3, 60.0),
+(25, 1, 3, 60.0),
+(35, 5, 1, 20.0),
+(38, 1, 3, 60.0),
+(18, 1, 3, 60.0),
+(26, 2, 2, 40.0),
+(3, 2, 1, 20.0),
+(4, 4, 3, 60.0),
+(39, 4, 2, 40.0),
+(19, 1, 1, 20.0),
+(37, 4, 2, 40.0),
+(15, 1, 1, 20.0),
+(12, 1, 2, 40.0),
+(31, 2, 1, 20.0),
+(14, 2, 1, 20.0),
+(16, 5, 2, 40.0),
+(8, 4, 2, 40.0),
+(2, 1, 1, 20.0),
+(28, 2, 3, 60.0),
+(40, 1, 3, 60.0),
+(20, 4, 1, 20.0),
+(9, 3, 1, 20.0),
+(2, 5, 3, 60.0),
+(20, 1, 3, 60.0),
+(25, 3, 3, 60.0),
+(6, 4, 3, 60.0),
+(27, 2, 3, 60.0),
+(9, 3, 1, 20.0);
+
+INSERT INTO rbernita.t_pagos (id_reserva, metodo_pago, monto_pagado) VALUES
+(1, 'Transferencia', 500.00),
+(2, 'Efectivo', 500.00),
+(3, 'Efectivo', 500.00),
+(4, 'Efectivo', 500.00),
+(5, 'Efectivo', 500.00),
+(6, 'Tarjeta', 500.00),
+(7, 'Efectivo', 500.00),
+(8, 'Transferencia', 500.00),
+(9, 'Tarjeta', 500.00),
+(10, 'Tarjeta', 500.00),
+(11, 'Efectivo', 500.00),
+(12, 'Tarjeta', 500.00),
+(13, 'Tarjeta', 500.00),
+(14, 'Transferencia', 500.00),
+(15, 'Tarjeta', 500.00),
+(16, 'Efectivo', 500.00),
+(17, 'Tarjeta', 500.00),
+(18, 'Tarjeta', 500.00),
+(19, 'Transferencia', 500.00),
+(20, 'Efectivo', 500.00),
+(21, 'Transferencia', 500.00),
+(22, 'Tarjeta', 500.00),
+(23, 'Tarjeta', 500.00),
+(24, 'Transferencia', 500.00),
+(25, 'Efectivo', 500.00),
+(26, 'Efectivo', 500.00),
+(27, 'Transferencia', 500.00),
+(28, 'Transferencia', 500.00),
+(29, 'Efectivo', 500.00),
+(30, 'Efectivo', 500.00),
+(31, 'Transferencia', 500.00),
+(32, 'Transferencia', 500.00),
+(33, 'Transferencia', 500.00),
+(34, 'Efectivo', 500.00),
+(35, 'Efectivo', 500.00),
+(36, 'Transferencia', 500.00),
+(37, 'Efectivo', 500.00),
+(38, 'Transferencia', 500.00),
+(39, 'Transferencia', 500.00),
+(40, 'Efectivo', 500.00);
+
+
