@@ -1,0 +1,102 @@
+WITH IngresoEstancia AS (
+    -- Calcula el ingreso por estancia para reservas Confirmadas o Finalizadas
+    SELECT
+        r.cliente_id,
+        r.reserva_id,
+        -- Asume que la diferencia de fechas (en días) es el número de noches
+        (JULIANDAY(r.fecha_salida) - JULIANDAY(r.fecha_entrada)) * r.precio_noche AS ingreso_estancia
+    FROM
+        reservas r
+    WHERE
+        r.estado IN ('Confirmada', 'Finalizada')
+),
+IngresoServicios AS (
+    -- Calcula el ingreso total por servicios por cliente
+    SELECT
+        r.cliente_id,
+        SUM(sd.subtotal) AS ingreso_servicios
+    FROM
+        reservas r
+    JOIN
+        servicios_detalle sd ON r.reserva_id = sd.reserva_id
+    WHERE
+        r.estado IN ('Confirmada', 'Finalizada')
+    GROUP BY
+        r.cliente_id
+),
+IngresoTotalCliente AS (
+    -- Combina los ingresos de estancia y servicios por cliente
+    SELECT
+        c.cliente_id,
+        c.nombre,
+        c.email,
+        COALESCE(SUM(ie.ingreso_estancia), 0) + COALESCE(SUM(isc.ingreso_servicios), 0) AS ingreso_total
+    FROM
+        clientes c
+    LEFT JOIN
+        IngresoEstancia ie ON c.cliente_id = ie.cliente_id
+    LEFT JOIN
+        IngresoServicios isc ON c.cliente_id = isc.cliente_id
+    GROUP BY
+        c.cliente_id, c.nombre, c.email
+)
+SELECT
+    nombre,
+    email,
+    ingreso_total
+FROM
+    IngresoTotalCliente
+ORDER BY
+    ingreso_total DESC
+LIMIT 5;
+
+WITH RECURSIVE
+    -- CTE para generar una tabla de meses (ajustar el rango de fechas según sea necesario)
+    Meses AS (
+        SELECT DATE('2023-01-01') AS mes_inicio, DATE('2023-01-31') AS mes_fin
+        UNION ALL
+        SELECT DATE(mes_inicio, '+1 month'), DATE(mes_fin, '+1 month', 'start of month', '-1 day')
+        FROM Meses
+        WHERE mes_inicio < DATE('2024-12-01') -- Límite de tiempo
+    ),
+    NochesOcupadas AS (
+        -- Calcula las noches ocupadas por mes
+        SELECT
+            strftime('%Y-%m', m.mes_inicio) AS anio_mes,
+            SUM(
+                -- Calcula el número de días que la reserva se superpone con el mes
+                JULIANDAY(MIN(r.fecha_salida, m.mes_fin, DATE(m.mes_inicio, '+1 month'))) -
+                JULIANDAY(MAX(r.fecha_entrada, m.mes_inicio))
+            ) AS noches_ocupadas
+        FROM
+            Meses m
+        JOIN
+            reservas r ON r.estado IN ('Confirmada', 'Finalizada')
+            -- La reserva se superpone con el mes si la entrada es antes del fin del mes
+            -- y la salida es después del inicio del mes.
+            AND r.fecha_entrada < DATE(m.mes_inicio, '+1 month')
+            AND r.fecha_salida > m.mes_inicio
+        GROUP BY
+            anio_mes
+    ),
+    NochesDisponibles AS (
+        -- Calcula las noches disponibles teóricas
+        SELECT
+            strftime('%Y-%m', mes_inicio) AS anio_mes,
+            -- Noches disponibles = (Días del mes) * (Número de habitaciones activas)
+            (JULIANDAY(mes_fin) - JULIANDAY(mes_inicio) + 1) * (SELECT COUNT(*) FROM habitaciones WHERE activa = 1) AS noches_disponibles
+        FROM
+            Meses
+    )
+SELECT
+    nd.anio_mes,
+    COALESCE(no.noches_ocupadas, 0) AS noches_ocupadas,
+    nd.noches_disponibles,
+    -- Tasa de ocupación = (noches ocupadas / noches disponibles) * 100
+    ROUND((COALESCE(no.noches_ocupadas, 0) * 100.0) / nd.noches_disponibles, 2) AS tasa_ocupacion_porcentaje
+FROM
+    NochesDisponibles nd
+LEFT JOIN
+    NochesOcupadas no ON nd.anio_mes = no.anio_mes
+ORDER BY
+    nd.anio_mes;
